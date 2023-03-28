@@ -1,1 +1,1 @@
-# SotwareEngineeringProject
+# SoftwareEngineeringProject
