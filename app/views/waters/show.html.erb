@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @water.title %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @water.unit %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @water.amount %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @water.time %>
+</p>
+
+<%= link_to 'Edit', edit_water_path(@water) %> |
+<%= link_to 'Back', waters_path %>
