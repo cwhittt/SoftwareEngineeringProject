@@ -1,24 +1,38 @@
+<style type="text/css">
+  body{ background: lightgrey !important;
+  }
+  strong{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  } 
+  big{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+</style>
+<br>
+
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
-  <%= @water.title %>
+  <big><%= @water.title %></big>
 </p>
 
 <p>
   <strong>Unit:</strong>
-  <%= @water.unit %>
+  <big><%= @water.unit %></big>
 </p>
 
 <p>
   <strong>Amount:</strong>
-  <%= @water.amount %>
+  <big><%= @water.amount %></big>
 </p>
 
 <p>
   <strong>Time:</strong>
-  <%= @water.time %>
+  <big><%= @water.time %><big>
 </p>
 
-<%= link_to 'Edit', edit_water_path(@water) %> |
-<%= link_to 'Back', waters_path %>
+<button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_water_path(@water) %></button>
+<button type="button" class="btn btn-info"><%= link_to 'Back', waters_path %></button>

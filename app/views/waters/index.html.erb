@@ -3,7 +3,7 @@
 <head>
 
 <style type="text/css">
-   body { background: darkgrey !important; } 
+   body { background: lightgrey !important; } 
 </style>
 
 <style>
@@ -17,26 +17,28 @@ h1{
 }
 
 h2{
-  font-size: 32px;
-  color: blue;
+  font-size: 40px;
+  color: darkblue;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 th{
   font-size: 24px;
   color: black;
-  text-align: left;
+  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .body{
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 td{
   font-size: 18px;
   color: black;
-  text-align: left;
+  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -69,17 +71,18 @@ td{
         <td><%= water.unit %></td>
         <td><%= water.amount %></td>
         <td><%= water.time %></td>
-        <td><%= link_to 'Show', water %></td>
-        <td><%= link_to 'Edit', edit_water_path(water) %></td>
-        <td><%= link_to 'Destroy', water, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button type="button" class="btn btn-info"><%= link_to 'Show', water %></button></td>
+        <td><button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_water_path(water) %></button></td>
+        <td><button type="button" class="btn btn-danger"><%= link_to 'Destroy', water, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+</div>
 
-<%= link_to 'New Water', new_water_path %>
+<button type="button" class="btn btn-info"><%= link_to 'New Water', new_water_path %></button>
 
 </div>
 

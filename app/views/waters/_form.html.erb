@@ -1,3 +1,12 @@
+<style type="text/css">
+   .field{
+    font-size: 20px;
+    color: black;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+</style>
+
 <%= form_with(model: water) do |form| %>
   <% if water.errors.any? %>
     <div id="error_explanation">
@@ -12,26 +21,26 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <b><%= form.label :title %></b>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :unit %>
+    <b><%= form.label :unit %></b>
     <%= form.text_field :unit %>
   </div>
 
   <div class="field">
-    <%= form.label :amount %>
+    <b><%= form.label :amount %></b>
     <%= form.text_field :amount %>
   </div>
 
   <div class="field">
-    <%= form.label :time %>
+    <b><%= form.label :time %></b>
     <%= form.datetime_select :time %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+  <button type="button" class="btn btn-info"><%= form.submit %></button>
   </div>
 <% end %>
