@@ -23,6 +23,13 @@ h2{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h3{
+  font-size: 32px;
+  color: black;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 th{
   font-size: 24px;
   color: black;
@@ -43,15 +50,12 @@ td{
 }
 
 </style>
-
-<br>
-
 <h1> hydra </h1>
 
 <p id="notice"><%= notice %></p>
 
 <div class="body">
-<h2>Water Intake</h2>
+<h2>Logged Water Intake</h2>
 
 <table>
   <thead>
@@ -81,12 +85,26 @@ td{
   </tbody>
 </table>
 
+<h3> Current Total Water Intake:
+<% @waters.each do |water| %>
+  <%= get_Total(water.amount) %>
+<% end %>
+<%= print_Total() %>
+<%= print_unit(@waters) %>
+<%= reset_Total() %>
+</h3>
+
+
+
+
+
+<br>
+<br>
 <br>
 </div>
 <% if user_signed_in? %>
 <button type="button" class="btn btn-info"><%= link_to 'New Water', new_water_path %></button>
 <% end %> 
-
 </div>
 
 </body>
